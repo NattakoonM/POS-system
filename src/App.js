@@ -1,5 +1,6 @@
 import React from 'react';
 import {Row,Col, Navbar, Container,  } from 'react-bootstrap';
+import ProductCart from './components/ProductCart';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
                 </Container>
             
             </Navbar>
+            <ProductCart/>
           </Col>
           <Col md={4} sm={6} className='px-0' style={{height:'100vh',backgroundColor:'#B8B8B8'}}>
             <Navbar style={{backgroundColor: '#180E19',height:'8vh'}}>
