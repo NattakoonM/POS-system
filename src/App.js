@@ -1,27 +1,36 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import {Row,Col, Navbar, Container,  } from 'react-bootstrap';
+import Basket from './components/Basket';
 import ProductCart from './components/ProductCart';
 import products from './components/products';
 
 function App() {
-  const [cartItems,setCartItems] = useState([]);
+
+  const [cartItem,setcartItems] = useState([]);
   
-  function onAdd(product){
-    const newCart = [...cartItems];
-    const idx = cartItems.findIndex( item => item.id === product.id)
-    if(idx !== -1){
+  function onAdd (item){
+    const idx = cartItem.findIndex(index => index.id === item.id)
+    const newCart = [...cartItem];          //clone state
+    if (idx !== -1){                        //find item.id
       newCart[idx] = {...newCart[idx],qty : newCart[idx].qty + 1}
+      
     }else{
-      newCart.push({...product,qty:1})
+      newCart.push({...item, qty :1} ); //add key qty in Object item by deconstruct (item)=object of item that chosen
     }
-    setCartItems(newCart)
+    setcartItems(newCart);
+    }
+
+  function onRemove(item){
+    
+    if(item.qty === 1){         //item.qty =1  setcatItem will set state of cartItem 
+      const newCart = cartItem.filter( x => x.id !== item.id);   //by filter out that item.id that equal product.id that you choose
+      setcartItems(newCart);   //set new state of cartItem that doesn't have that product
+    } else{
+      setcartItems(       //if item.id >1
+        cartItem.map( x => x.id === item.id ? {...item, qty : item.qty -1} : x)
+      )
+    }
   }
-
-
-
-
-
-
 
 
 
@@ -39,7 +48,7 @@ function App() {
                 </Container>
             
             </Navbar>
-            <ProductCart products= {products}/>
+            <ProductCart products= {products} onAdd={onAdd}/>
           </Col>
           <Col md={4} sm={6} className='px-0' style={{height:'100vh',backgroundColor:'#B8B8B8'}}>
             <Navbar style={{backgroundColor: '#180E19',height:'8vh'}}>
@@ -51,6 +60,7 @@ function App() {
                 </Container>
               
             </Navbar>
+                < Basket  cartItem={cartItem} onAdd={onAdd} onRemove={onRemove}/>
           </Col>
         </Row>
       

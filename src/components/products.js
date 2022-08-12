@@ -1,7 +1,7 @@
 const products = [
     {
         id:1,
-        name:'Quarter Pounder With Cheese',
+        name:'Medium Soda',
         price:130,
         
     },
@@ -25,7 +25,7 @@ const products = [
     },
     {
         id:5,
-        name:'Medium Soda',
+        name:'Fish Burger ',
         price:50,
         
     },
