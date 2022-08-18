@@ -1,0 +1,102 @@
+{
+  "transaction": [
+    {
+      "id": "44a80661-e4c4-4288-ac1a-5aad3ef6a722",
+      "creditCard": 0,
+      "mobileBanking": 0,
+      "cash": 0
+    },
+    {
+      "id": "8d8e7c0d-28d7-4069-bf06-a7373db55f31",
+      "creditCard": 10,
+      "mobileBanking": 5,
+      "cash": 10.92
+    },
+    {
+      "id": "39c6d7db-d680-481b-89d0-019f3bfd18f3",
+      "creditCard": 0,
+      "mobileBanking": 0,
+      "cash": 0
+    },
+    {
+      "id": "bf301af2-6381-4fc0-9e52-7ec590fc13ca",
+      "creditCard": 0,
+      "mobileBanking": 0,
+      "cash": 0
+    },
+    {
+      "id": "590ae528-27bf-4342-8c4d-2625fa060a69",
+      "creditCard": 4,
+      "mobileBanking": 10,
+      "cash": 30.15
+    },
+    {
+      "id": "9c1fce95-6d8a-4c8f-80ff-c14200a294bf",
+      "creditCard": 0,
+      "mobileBanking": 0,
+      "cash": 0
+    },
+    {
+      "id": "ddd0b126-6bc4-45a8-b915-781a03bb80ed",
+      "creditCard": 0,
+      "mobileBanking": 0,
+      "cash": 0
+    },
+    {
+      "id": "93e7b962-49f4-4eff-bf78-b5b6e5ad2fab",
+      "creditCard": 0,
+      "mobileBanking": 0,
+      "cash": 0,
+      "time": "Thu Aug 18 2022 18:38:08 GMT+0700 (Indochina Time)"
+    },
+    {
+      "id": "cb532296-ff79-4fc3-bfbe-c327954ee181",
+      "creditCard": 10,
+      "mobileBanking": 8,
+      "cash": 10.8,
+      "time": "Thu Aug 18 2022 18:39:04 GMT+0700 (Indochina Time)"
+    },
+    {
+      "id": "2593083d-43da-4d0b-83d9-0db3e2dd598e",
+      "creditCard": 0,
+      "mobileBanking": 0,
+      "cash": 0,
+      "time": "Thu Aug 18 2022 18:39:05 GMT+0700 (Indochina Time)"
+    },
+    {
+      "id": "6abdbc66-d62f-4439-844a-0a27cfa7d9eb",
+      "creditCard": 0,
+      "mobileBanking": 0,
+      "cash": 0,
+      "time": "Thu Aug 18 2022 18:39:05 GMT+0700 (Indochina Time)"
+    },
+    {
+      "id": "5d31095c-69b5-4485-a55a-6039ebe7edfe",
+      "creditCard": 0,
+      "mobileBanking": 0,
+      "cash": 21.34,
+      "time": "Thu Aug 18 2022 18:41:53 GMT+0700 (Indochina Time)"
+    },
+    {
+      "id": "a8f40ddb-6a6b-49e4-85a9-195cdc70266f",
+      "creditCard": 10,
+      "mobileBanking": 8,
+      "cash": 10.4,
+      "time": "Thu Aug 18 2022 18:42:20 GMT+0700 (Indochina Time)"
+    },
+    {
+      "id": "1ad990d1-cd1a-450e-89f8-bdc465ea50d2",
+      "creditCard": 0,
+      "mobileBanking": 0,
+      "cash": 0,
+      "time": "Thu Aug 18 2022 18:42:22 GMT+0700 (Indochina Time)"
+    },
+    {
+      "id": "7945cd8c-5574-4baf-b349-c113e12dbfb8",
+      "creditCard": 0,
+      "mobileBanking": 0,
+      "cash": 0,
+      "time": "Thu Aug 18 2022 18:42:22 GMT+0700 (Indochina Time)"
+    }
+  ]
+}

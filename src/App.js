@@ -1,23 +1,37 @@
 import React, { useState } from 'react';
-import {Row,Col, Navbar, Container,  } from 'react-bootstrap';
+import {Row,Col, Navbar, Container, Badge,  } from 'react-bootstrap';
 import Basket from './components/Basket';
 import ProductCart from './components/ProductCart';
 import products from './components/products';
 
 function App() {
-
+  
   const [cartItem,setcartItems] = useState([]);
   
+  function onAdded (item){
+    const idx = cartItem.findIndex(index => index.id === item.id)
+    const newCart = [...cartItem];          //clone state
+    if (idx !== -1){                        //find item.id
+      // newCart[idx] = {...newCart[idx],qty : newCart[idx].qty + 1};
+      alert('Added to cart already!!')
+    }else{
+      newCart.push({...item, qty :1} ); //add key qty in Object item by deconstruct (item)=object of item that chosen
+    }
+    setcartItems(newCart);
+    
+    }
+
   function onAdd (item){
     const idx = cartItem.findIndex(index => index.id === item.id)
     const newCart = [...cartItem];          //clone state
     if (idx !== -1){                        //find item.id
-      newCart[idx] = {...newCart[idx],qty : newCart[idx].qty + 1}
+      newCart[idx] = {...newCart[idx],qty : newCart[idx].qty + 1};
       
     }else{
       newCart.push({...item, qty :1} ); //add key qty in Object item by deconstruct (item)=object of item that chosen
     }
     setcartItems(newCart);
+    
     }
 
   function onRemove(item){
@@ -48,19 +62,19 @@ function App() {
                 </Container>
             
             </Navbar>
-            <ProductCart products= {products} onAdd={onAdd}/>
+            <ProductCart products= {products} onAdd={onAdd} cartItem={cartItem} onAdded={onAdded}/>
           </Col>
           <Col md={4} sm={6} className='px-0' style={{height:'100vh',backgroundColor:'#B8B8B8'}}>
             <Navbar style={{backgroundColor: '#180E19',height:'8vh'}}>
               
                 <Container  className='d-flex justify-content-center'>
                   <Navbar.Brand style={{color:'#FFFDFD'}} className='fs-3'>
-                  Cart list
+                  Cart list <Badge pill bg='secondary' text='light'>{cartItem.length}</Badge>
                   </Navbar.Brand>
                 </Container>
               
             </Navbar>
-                < Basket  cartItem={cartItem} onAdd={onAdd} onRemove={onRemove}/>
+                < Basket  cartItem={cartItem} onAdd={onAdd} onRemove={onRemove} />
           </Col>
         </Row>
       
